@@ -8,7 +8,6 @@
 -- PHP Version: 5.6.32
 
 
-
 CREATE TABLE `dados` (
   `id` int(11) NOT NULL,
   `nome` text NOT NULL,

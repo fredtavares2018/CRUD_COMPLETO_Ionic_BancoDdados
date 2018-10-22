@@ -1,5 +1,6 @@
 angular.module('App', ['ngCordova'])
 
+
 .controller('CrudCtrl', ['$scope',
 	function($scope,$rootScope,$http,$state,$ionicModal) {
 

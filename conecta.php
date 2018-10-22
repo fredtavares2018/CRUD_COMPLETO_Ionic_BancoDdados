@@ -1,6 +1,6 @@
 <?php
 
-// CONEXAO COM O BANCO DE DADOs
+// CONEXAO COM O BANCO DE DADOS
 $conexao = mysql_connect("localhost","root","");
 
 $teste = mysql_set_charset('UTF8', $conexao);
