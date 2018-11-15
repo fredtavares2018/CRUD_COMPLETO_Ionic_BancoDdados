@@ -1,5 +1,9 @@
-# banco de dados - angular - ionic
+# IonicServerSave
+The simplest example on how to POST data from Ionic to PHP server. Tutorial on how to create this step by step can be found [here](http://www.nikola-breznjak.com/blog/ionic/posting-data-from-ionic-app-to-php-server/).
 
-Cadastro realizado com php / ionic 
+![app in action](ionic_phpDemo.jpg)
 
-Tentando ajudar, da mesma forma que fui ajudado.
+
+The version for Ionic 2 of this project can be found [here](https://github.com/Hitman666/Ionic2ServerSendTest).
+
+The version for Ionic 3 is [here](https://github.com/Hitman666/Ionic3ServerSendTest).

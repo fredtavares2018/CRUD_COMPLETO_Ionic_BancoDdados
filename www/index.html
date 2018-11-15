@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title></title>
+        <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+        <link href="css/ionic.app.css" rel="stylesheet">
+        -->
+        <!-- ionic/angularjs js -->
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <!-- cordova script (this will be a 404 during development) -->
+        <script src="cordova.js"></script>
+        <!-- your app's js -->
+        <script src="js/app.js"></script>
+    </head>
+    <body ng-app="starter" ng-controller="AppCtrl">
+        <ion-pane>
+            <ion-header-bar class="bar-stable">
+                <h1 class="title">Ionic Blank Starter</h1>
+            </ion-header-bar>
+
+            <ion-content padding="true">
+                <form >
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Nome</span>
+                        <input 
+                        type="text" 
+                        placeholder="digite seu nome"
+                        ng-model="form.username">
+                    </label>
+
+                    <button class="button button-block button-positive" ng-click=gravar(form)>GRAVAR</button>                    
+                </form>
+
+                <div class="card">
+                    <div class="item item-text-wrap">
+                        Resposta: <b ng-bind="response"></b>
+                    </div>
+                </div>
+
+
+                  <ion-list>
+
+          <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" ng-model="input.filterUser" placeholder="Buscar por nome">
+          </label>
+
+      <ion-item 
+      class="item-remove-animate" 
+      ng-repeat="cli in clientes | filter:input.filterUser" 
+      type="item-text-wrap" >
+
+        <br>
+        
+        <i class="ion-android-calendar positive"></i>
+        <h2></h2>
+         <input 
+                type="text" 
+                ng-model="cli.nome" 
+                ng-show="true">
+
+        <div align="center">
+          <button class=" button button-positive button-small" ng-click="clonar(cli.nome)">CLONAR</button>
+            <button class="button button-balanced button-small" ng-click="editar(cli.id,cli.nome)">EDITAR</button>
+            <button class="button button-assertive button-small" ng-click="excluir(cli.id)">EXCLUIR</button>  
+        </div>        
+
+        
+      
+
+      </ion-item>
+
+    </ion-list>
+
+
+            </ion-content>
+        </ion-pane>
+    </body>
+</html>
